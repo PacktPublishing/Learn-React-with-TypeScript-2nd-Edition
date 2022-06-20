@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "noEmit": true,
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+      "moduleResolution": "node",    
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "jsx": "react",
+      "forceConsistentCasingInFileNames": true,
+      "strict": true
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+  }
+  
