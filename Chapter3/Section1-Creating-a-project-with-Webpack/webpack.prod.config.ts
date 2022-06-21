@@ -1,18 +1,16 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { Configuration as WebpackConfig, HotModuleReplacementPlugin } from 'webpack';
-import { Configuration as WebpackDevServerConfig } from 'webpack-dev-server';
+import { Configuration } from 'webpack';
 import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
 import ESLintPlugin from 'eslint-webpack-plugin';
-
-type Configuration = WebpackConfig & {
-  devServer?: WebpackDevServerConfig;
-};
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 
 const config: Configuration = {
-  mode: 'development',
+  mode: 'production',
   output: {
-    publicPath: '/',
+    path: path.resolve(__dirname, 'dist'),
+    filename: '[name].[contenthash].js',
+    publicPath: '',
   },
   entry: './src/index.tsx',
   module: {
@@ -36,20 +34,13 @@ const config: Configuration = {
     new HtmlWebpackPlugin({
       template: 'src/index.html',
     }),
-    new HotModuleReplacementPlugin(),
     new ForkTsCheckerWebpackPlugin(),
     new ESLintPlugin({
       extensions: ['js', 'jsx', 'ts', 'tsx'],
     }),
+    new CleanWebpackPlugin(),
   ],
   devtool: 'inline-source-map',
-  devServer: {
-    static: path.join(__dirname, 'dist'),
-    historyApiFallback: true,
-    port: 4000,
-    open: true,
-    hot: true,
-  },
 };
 
 export default config;
