@@ -1,0 +1,38 @@
+.container {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.container.warning {
+  color: #e7650f;
+  background-color: #f3e8da;
+}
+.container.information {
+  color: #118da0;
+  background-color: #dcf1f3;
+}
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.header-icon {
+  width: 30px;
+}
+.header-text {
+  font-weight: bold;
+}
+.close-button {
+  border: none;
+  background: transparent;
+  margin-left: auto;
+  cursor: pointer;
+}
+.content {
+  margin-left: 30px;
+  color: #000;
+}
