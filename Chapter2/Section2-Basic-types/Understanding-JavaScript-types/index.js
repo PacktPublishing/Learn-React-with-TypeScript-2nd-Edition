@@ -6,4 +6,4 @@ let date = new Date(2022, 10, 1);
 console.log("date", date, typeof date);
 
 score = "ten"
-console.log("score", score, typeof firstName);
+console.log("score", score, typeof score);
