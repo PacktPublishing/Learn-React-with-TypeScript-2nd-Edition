@@ -1,5 +1,5 @@
 function calculateTotalPrice(
-  product: { name: string, unitPrice: number },
+  product: { name: string; unitPrice: number },
   quantity: number,
   discount: number
 ) {

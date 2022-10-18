@@ -1,5 +1,5 @@
 type Purchase = (quantity: number) => void; 
-type Product = { name: string, unitPrice?: number, purchase: Purchase };
+type Product = { name: string; unitPrice?: number; purchase: Purchase };
 
 let table: Product = {
   name: "Table",

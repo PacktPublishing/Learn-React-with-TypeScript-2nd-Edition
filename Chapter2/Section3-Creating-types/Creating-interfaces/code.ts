@@ -3,7 +3,7 @@ interface Purchase {(quantity: number): void}
 interface Product {
   name: string;
   unitPrice?: number;
-  purchase: Purchase,
+  purchase: Purchase;
 }
 let table: Product = { 
   name: "Table",
