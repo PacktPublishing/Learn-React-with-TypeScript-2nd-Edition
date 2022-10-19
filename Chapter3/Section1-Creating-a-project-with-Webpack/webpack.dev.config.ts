@@ -1,13 +1,16 @@
 import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
-import { Configuration as WebpackConfig, HotModuleReplacementPlugin } from 'webpack';
-import { Configuration as WebpackDevServerConfig } from 'webpack-dev-server';
-import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
-import ESLintPlugin from 'eslint-webpack-plugin';
+import {
+  Configuration as WebpackConfig,
+  HotModuleReplacementPlugin,
+} from 'webpack';
+import { 
+  Configuration as WebpackDevServerConfig 
+} from 'webpack-dev-server';
 
 type Configuration = WebpackConfig & {
   devServer?: WebpackDevServerConfig;
-};
+}
 
 const config: Configuration = {
   mode: 'development',
@@ -37,10 +40,6 @@ const config: Configuration = {
       template: 'src/index.html',
     }),
     new HotModuleReplacementPlugin(),
-    new ForkTsCheckerWebpackPlugin(),
-    new ESLintPlugin({
-      extensions: ['js', 'jsx', 'ts', 'tsx'],
-    }),
   ],
   devtool: 'inline-source-map',
   devServer: {
@@ -49,7 +48,7 @@ const config: Configuration = {
     port: 4000,
     open: true,
     hot: true,
-  },
+  }
 };
 
 export default config;
