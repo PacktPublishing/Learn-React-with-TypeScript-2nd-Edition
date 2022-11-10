@@ -20,7 +20,7 @@ export function Header() {
         <img src={logo} alt="Logo" className="inline-block h-20" />
       </Link>
       <Link to="">
-        <h1 className="text-2xl">React Shop</h1>
+        <h1 className="text-2xl">React Tools</h1>
       </Link>
       <nav>
         <NavLink
