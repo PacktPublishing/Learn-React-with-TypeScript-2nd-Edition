@@ -24,7 +24,7 @@ export function ContactPage() {
           <input type="email" id="email" name="email" />
         </div>
         <div className={fieldStyle}>
-          <label htmlFor="reaon">Reason you need to contact us</label>
+          <label htmlFor="reason">Reason you need to contact us</label>
           <select id="reason" name="reason">
             <option value=""></option>
             <option value="Support">Support</option>
