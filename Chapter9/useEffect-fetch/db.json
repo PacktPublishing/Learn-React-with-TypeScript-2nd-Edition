@@ -1,0 +1,19 @@
+{
+  "posts": [
+    {
+      "title": "Getting started with fetch",
+      "description": "How to interact with backend APIs using fetch",
+      "id": 1
+    },
+    {
+      "title": "Getting started with useEffect",
+      "description": "How to use React's useEffect hook for interacting with backend APIs",
+      "id": 2
+    },
+    {
+      "title": "Using fetch to POST data",
+      "description": "How to use fetch to make HTTP POST requests to a backend API",
+      "id": 3
+    }
+  ]
+}
