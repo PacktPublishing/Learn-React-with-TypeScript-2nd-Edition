@@ -1,0 +1,47 @@
+query {  
+  viewer {  
+    name 
+  } 
+}
+
+
+query {  
+  viewer {  
+    name 
+    avatarUrl 
+  } 
+}
+
+
+query {  
+  repository (owner:"facebook", name:"react") { 
+    id
+    name 
+    description 
+  } 
+}
+
+
+query {  
+  repository (owner:"facebook", name:"react") { 
+    id
+    name 
+    description 
+    stargazers { 
+      totalCount 
+    } 
+  } 
+}
+
+
+{ 
+  "owner": "facebook", 
+  "name": "react" 
+}
+query ($owner: String!, $name: String!) {  
+  repository (owner:$owner, name:$name) { 
+    ... 
+  } 
+}
+
+

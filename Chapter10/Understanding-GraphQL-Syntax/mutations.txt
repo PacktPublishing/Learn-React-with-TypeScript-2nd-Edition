@@ -1,0 +1,16 @@
+"MDEwOlJlcG9zaXRvcnkyMDkyOTAyNQ=="
+
+
+{ 
+  "repoId": "MDEwOlJlcG9zaXRvcnkyMDkyOTAyNQ=="
+}
+mutation ($repoId: ID!) { 
+  addStar(input: { starrableId: $repoId }) { 
+    starrable { 
+      stargazers { 
+        totalCount 
+      } 
+    } 
+  } 
+}
+
