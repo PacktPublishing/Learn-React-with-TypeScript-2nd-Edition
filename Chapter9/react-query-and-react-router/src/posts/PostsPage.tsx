@@ -1,5 +1,5 @@
 import { Suspense } from 'react';
-import { useLoaderData, Await } from 'react-router-dom';
+import { useLoaderData, Await, useNavigate } from 'react-router-dom';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { assertIsPosts } from './getPosts';
 import { PostData } from './types';
@@ -8,6 +8,7 @@ import { savePost } from './savePost';
 import { NewPostForm } from './NewPostForm';
 
 export function PostsPage() {
+  const navigate = useNavigate();
   const queryClient = useQueryClient();
   const { mutate } = useMutation(savePost, {
     onSuccess: (savedPost) => {
@@ -18,6 +19,7 @@ export function PostsPage() {
           return [savedPost, ...oldPosts];
         }
       });
+      navigate('/');
     },
   });
 

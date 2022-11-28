@@ -12,9 +12,9 @@ const router = createBrowserRouter([
     loader: async () => {
       const existingData = queryClient.getQueryData(['postsData']);
       if (existingData) {
-        return existingData;
+        return defer({ posts: existingData });
       }
-      return defer({ posts: getPosts() });
+      return defer({ posts: queryClient.fetchQuery(['postsData'], getPosts) });
     },
   },
 ]);
