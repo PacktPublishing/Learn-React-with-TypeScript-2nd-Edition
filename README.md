@@ -2,7 +2,7 @@
 
 <a href="https://www.packtpub.com/product/learn-react-with-typescript-second-edition/9781804614204"><img src="https://static.packt-cdn.com/products/9781804614204/cover/smaller" alt="Learn React with TypeScript - Second Edition" height="256px" align="right"></a>
 
-This is the code repository for [Test-Driven iOS Development with Swift](https://www.packtpub.com/product/learn-react-with-typescript-second-edition/9781804614204), published by Packt.
+This is the code repository for [Learn React with TypeScript - Second Edition](https://www.packtpub.com/product/learn-react-with-typescript-second-edition/9781804614204), published by Packt.
 
 **A beginner's guide to reactive web development with React 18 and TypeScript**
 
