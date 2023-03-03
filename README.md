@@ -67,3 +67,8 @@ has been in the software industry for over 20 years developing complex lines of 
 * [ASP.NET Core 5 and React - Second Edition](https://www.packtpub.com/product/aspnet-core-5-and-react-second-edition/9781800206168)
 * [Learn React with TypeScript 3](https://www.packtpub.com/product/learn-react-with-typescript-3/9781789610253?_ga=2.115218816.60521389.1675320509-1593508983.1675068804)
 * [ASP.NET Core 3 and React](https://www.packtpub.com/product/aspnet-core-3-and-react/9781789950229)
+
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781804614204">https://packt.link/free-ebook/9781804614204 </a> </p>
