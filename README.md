@@ -51,6 +51,8 @@ With the following software and hardware list you can run all code files present
 
 We also provide a PDF file that has color images of the screenshots/diagrams used in this book. [Click here to download it](https://packt.link/5CvU5).
 
+## Errata
+* Page 137: _In Step 7,_ React.tsx _should be_ Reset.tsx
 
 ### Related products
 * React and React Native - Fourth Edition [[Packt]](https://www.packtpub.com/product/react-and-react-native-fourth-edition/9781803231280) [[Amazon]](https://www.amazon.com/React-Native-cross-platform-JavaScript-applications/dp/1803231289)
