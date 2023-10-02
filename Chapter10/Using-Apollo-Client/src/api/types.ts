@@ -17,3 +17,12 @@ export type RepoData = {
     };
   };
 };
+export type StarRepoData = {
+  addStar: {
+    starrable: {
+      stargazers: {
+        totalCount: number;
+      };
+    };
+  };
+};
