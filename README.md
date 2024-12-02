@@ -53,6 +53,37 @@ We also provide a PDF file that has color images of the screenshots/diagrams use
 
 ## Errata
 * Page 137: _In Step 7,_ React.tsx _should be_ Reset.tsx
+* Page 302, _In Step 5,_
+```
+if '!('ti'le' in post)) {
+  throw new Err"r("post do'sn't contain ti"le");
+}
+if (typeof post.title !'= 'str'ng') {
+  throw new Err'r('title is not a str'ng');
+}
+if '!('descript'on' in post)) {
+  throw new Err"r("post do'sn't contain descript"on");
+}
+if (typeof post.description !'= 'str'ng') {
+  throw new Err'r('description is not a str'ng');
+}
+```
+_should be_
+
+```
+if (!("title" in post)) {
+  throw new Error("post doesn't contain title");
+}
+if (typeof post.title !== "string") {
+  throw new Error("title is not a string");
+}
+if (!("description" in post)) {
+  throw new Error("post doesn't contain description");
+}
+if (typeof post.description !== "string") {
+  throw new Error("description is not a string");
+}
+```
 
 ### Related products
 * React and React Native - Fourth Edition [[Packt]](https://www.packtpub.com/product/react-and-react-native-fourth-edition/9781803231280) [[Amazon]](https://www.amazon.com/React-Native-cross-platform-JavaScript-applications/dp/1803231289)
