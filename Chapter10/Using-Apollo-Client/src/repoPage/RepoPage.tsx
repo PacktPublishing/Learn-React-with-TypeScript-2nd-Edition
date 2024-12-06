@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useLazyQuery, useMutation, useApolloClient } from '@apollo/client';
 import { GET_REPO } from '../api/getRepo';
 import { STAR_REPO } from '../api/starRepo';
-import { SearchCriteria } from '../api/types';
+import { SearchCriteria, StarRepoData } from '../api/types';
 import { SearchRepoForm } from './SearchRepoForm';
 import { FoundRepo } from './FoundRepo';
 import { StarRepoButton } from './StarRepoButton';
@@ -12,13 +12,16 @@ export function RepoPage() {
   const [getRepo, { data }] = useLazyQuery(GET_REPO);
   const queryClient = useApolloClient();
   const [starRepo] = useMutation(STAR_REPO, {
-    onCompleted: () => {
+    onCompleted: (responseData: StarRepoData) => {
       queryClient.cache.writeQuery({
         query: GET_REPO,
         data: {
           repository: {
             ...data.repository,
             viewerHasStarred: true,
+            stargazers: {
+              totalCount: responseData.addStar.starrable.stargazers.totalCount,
+            },
           },
         },
         variables: searchCriteria,
